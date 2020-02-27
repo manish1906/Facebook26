@@ -16,7 +16,7 @@ using FBRxweb.UnitOfWork.Main;
             using FBRxweb.Domain.vUserProfileModule;
             using FBRxweb.Domain.ProfilePhotoModule;
             using FBRxweb.Domain.CoverPhotoModule;
-            using FBRxweb.Domain.vEducationDetailModule;
+         //   using FBRxweb.Domain.vEducationDetailModule;
             #endregion Namespace
 
 
@@ -70,8 +70,7 @@ namespace FBRxweb.Api.Bootstrap
             serviceCollection.AddScoped<IProfilePhotoUow, ProfilePhotoUow>();
                         serviceCollection.AddScoped<ICoverPhotoContext, CoverPhotoContext>();
             serviceCollection.AddScoped<ICoverPhotoUow, CoverPhotoUow>();
-                        serviceCollection.AddScoped<IVEducationDetailContext, VEducationDetailContext>();
-            serviceCollection.AddScoped<IVEducationDetailUow, VEducationDetailUow>();
+                       
             #endregion ContextService
 
 
@@ -107,7 +106,7 @@ namespace FBRxweb.Api.Bootstrap
             
             serviceCollection.AddScoped<ICoverPhotoDomain, CoverPhotoDomain>();
             
-            serviceCollection.AddScoped<IvEducationDetailDomain, vEducationDetailDomain>();
+           
             #endregion DomainService
 
 

@@ -19,9 +19,11 @@ namespace FBRxweb.Domain.ProfilePhotoModule
             return await Uow.Repository<ProfilePhoto>().AllAsync();
         }
 
-        public Task<object> GetBy(ProfilePhoto parameters)
+        public async Task<object> GetBy(ProfilePhoto parameters)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            return await Uow.Repository<ProfilePhoto>().FindByAsync(m => m.UserId == parameters.UserId);
         }
         
 

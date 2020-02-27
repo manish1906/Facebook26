@@ -20,9 +20,11 @@ namespace FBRxweb.Domain.CoverPhotoModule
 
         }
 
-        public Task<object> GetBy(CoverPhoto parameters)
+        public async Task<object> GetBy(CoverPhoto parameters)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            return await Uow.Repository<CoverPhoto>().FindByAsync(m => m.UserId == parameters.UserId);
         }
         
 

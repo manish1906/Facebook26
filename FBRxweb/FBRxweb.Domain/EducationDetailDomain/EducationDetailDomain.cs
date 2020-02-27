@@ -16,14 +16,14 @@ namespace FBRxweb.Domain.EducationDetailModule
         public async Task<object> GetAsync(EducationDetail parameters)
         {
             //     throw new NotImplementedException();
-            return await Uow.Repository<EducationDetail>().AllAsync();
+           return await Uow.Repository<EducationDetail>().AllAsync();
 
         }
 
         public async Task<object> GetBy(EducationDetail parameters)
         {
             //throw new NotImplementedException();
-            return await Uow.Repository<EducationDetail>().SingleOrDefaultAsync(m=>m.UserId==parameters.UserId);
+            return await Uow.Repository<EducationDetail>().FindByAsync(m=>m.UserId==parameters.UserId);
         }
         
 
